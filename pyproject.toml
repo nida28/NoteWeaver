@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "noteweaver"
+version = "0.1.0"
+description = "Clean up raw OCR or ChatGPT dump text into neat Markdown files, one per day"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "openai>=1.40.0",
+    "python-dotenv>=1.0.1",
+]
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.scripts]
+noteweaver = "weave.cli:main"
+clean-md = "weave.cli:main"  # Alternative shorter name
+
+[tool.setuptools]
+packages = ["weave"]
+

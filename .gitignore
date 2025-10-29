@@ -1,0 +1,35 @@
+.env
+.cache/
+cache/
+logs/
+data/output/
+__pycache__/
+*.pyc
+*.log
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
