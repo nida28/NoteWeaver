@@ -1,7 +1,5 @@
 # NoteWeaver
 
-Clean up raw OCR or ChatGPT dump text into neat, organized Markdown files, one per day.
-
 NoteWeaver takes messy text dumps from OCR or ChatGPT conversations and transforms them into clean, well-formatted Markdown files organized chronologically. It handles noise removal, formatting fixes, and deduplication using AI-powered cleaning.
 
 ## Features
