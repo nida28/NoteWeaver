@@ -34,6 +34,9 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
+# Install package in editable mode (recommended for src-layout)
+pip install -e .
+
 # Set up environment variables
 cp .env.example .env
 # Edit .env and add your OPENAI_API_KEY
@@ -137,20 +140,21 @@ NoteWeaver/
 │   ├── samples/             # Sample input files
 │   └── output/              # Generated Markdown files (gitignored)
 │
-├── tests/                   # Test suite
-│   ├── __init__.py
-│   └── test_parsing.py
+├── src/                     # Source package (src-layout)
+│   └── weave/               # Main package
+│       ├── __init__.py
+│       ├── __main__.py      # Enables: python -m weave
+│       ├── cli.py           # Command-line interface
+│       ├── config.py        # Configuration constants
+│       ├── pipeline.py      # Main pipeline orchestration
+│       ├── parsing.py       # Text parsing and block extraction
+│       ├── cleaning.py      # LLM-based text cleaning
+│       ├── dedup.py         # Duplicate detection and removal
+│       └── writing.py       # Markdown file writing
 │
-└── weave/                   # Main package
+└── tests/                   # Test suite
     ├── __init__.py
-    ├── __main__.py          # Enables: python -m weave
-    ├── cli.py               # Command-line interface
-    ├── config.py            # Configuration constants
-    ├── pipeline.py          # Main pipeline orchestration
-    ├── parsing.py           # Text parsing and block extraction
-    ├── cleaning.py          # LLM-based text cleaning
-    ├── dedup.py             # Duplicate detection and removal
-    └── writing.py           # Markdown file writing
+    └── test_parsing.py
 ```
 
 ## Requirements

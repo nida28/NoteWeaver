@@ -34,4 +34,5 @@ clean-md = "weave.cli:main"  # Alternative shorter name
 
 [tool.setuptools]
 packages = ["weave"]
+package-dir = {"" = "src"}
 
